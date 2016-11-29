@@ -1,0 +1,19 @@
+﻿{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "raw-data-queue",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "eventHub",
+      "name": "outputEventHubMessage",
+      "path": "iqrf-data",
+      "connection": "DataEventHub",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
